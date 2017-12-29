@@ -1,6 +1,7 @@
 _AlreadyFoughtOneText::
-	text "You already fought a"
-	line "pokemon here!"
+	text "You already fought"
+	line "a pokemon here!"
 
-	para "Don't break the rules!"
+	para "Don't break the"
+	line "rules!"
 	done

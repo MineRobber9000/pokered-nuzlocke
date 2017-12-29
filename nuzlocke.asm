@@ -1,5 +1,5 @@
-INCLUDE "macros.asm"
-INCLUDE "constants/hardware_constants.asm"
+;INCLUDE "macros.asm"
+INCLUDE "constants.asm"
 
 SECTION "Nuzlocke Code",ROMX,BANK[$20]
 

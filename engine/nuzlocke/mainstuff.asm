@@ -66,6 +66,7 @@ CheckFought::
 
 SetFought::
 	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
+	ret z ; if we haven't got the PokeBalls from Professor Oak, don't even bother setting the flag)
 	ld a,[wCurMap]
 	ld hl,wNuzlockeBattleFlags
 	call SetTableBit

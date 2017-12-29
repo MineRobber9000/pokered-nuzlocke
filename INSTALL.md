@@ -8,17 +8,12 @@
 	sudo make install
 	cd ..
 
-	git clone --recursive https://github.com/pret/pokered
-	cd pokered
+	git clone --recursive https://github.com/MineRobber9000/pokered-nuzlocke
+	cd pokered-nuzlocke
 
-To build **pokered.gbc** and **pokeblue.gbc**:
+To build **pokered.gbc**:
 
 	make
-
-To build them individually:
-
-	make red
-	make blue
 
 
 # Mac
@@ -30,8 +25,8 @@ Then in **Terminal**, run:
 	xcode-select --install
 	brew install rgbds
 
-	git clone --recursive https://github.com/pret/pokered
-	cd pokered
+	git clone --recursive https://github.com/MineRobber9000/pokered-nuzlocke
+	cd pokered-nuzlocke
 
 	make
 
@@ -50,7 +45,7 @@ Extract the archive. Inside should be `rgbasm.exe`, `rgblink.exe`, `rgbfix.exe`,
 
 In the **Cygwin terminal**:
 
-	git clone --recursive https://github.com/pret/pokered
-	cd pokered
+	git clone --recursive https://github.com/MineRobber9000/pokered-nuzlocke
+	cd pokered-nuzlocke
 
 	make

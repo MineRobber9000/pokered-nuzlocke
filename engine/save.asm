@@ -75,6 +75,10 @@ LoadSAV0:
 	ld de, wBoxDataStart
 	ld bc, wBoxDataEnd - wBoxDataStart
 	call CopyData
+	ld hl, sNuzlockeBattleFlags
+	ld de, wNuzlockeBattleFlags
+	ld bc, $0008
+	call CopyData
 	and a
 	jp SAVGoodChecksum
 
@@ -216,6 +220,10 @@ SaveSAVtoSRAM0:
 	ld hl, wBoxDataStart
 	ld de, sCurBoxData
 	ld bc, wBoxDataEnd - wBoxDataStart
+	call CopyData
+	ld hl, wNuzlockeBattleFlags
+	ld de, sNuzlockeBattleFlags
+	ld bc, $0008
 	call CopyData
 	ld a, [hTilesetType]
 	ld [sTilesetType], a

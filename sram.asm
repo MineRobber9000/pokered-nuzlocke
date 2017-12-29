@@ -18,7 +18,9 @@ sSpriteData::  ds wSpriteDataEnd - wSpriteDataStart ; ad2c
 sPartyData::   ds wPartyDataEnd  - wPartyDataStart ; af2c
 sCurBoxData::  ds wBoxDataEnd    - wBoxDataStart ; b0c0
 sTilesetType:: ds 1 ; b522
-sMainDataCheckSum:: ds 1 ; b523
+sNuzlockeBattleFlags:: ; b523
+	ds 8 ; 8 bytes * 8 bits = 256 flags, more than enough to store a flag for every map in the game.
+sMainDataCheckSum:: ds 1 ; b52b
 
 
 SECTION "Saved Boxes 1", SRAM, BANK[2]

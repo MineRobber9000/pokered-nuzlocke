@@ -14,6 +14,7 @@ TEXT_11 EQU TEXT_10 + 1
 
 POKEDEX_TEXT EQU TEXT_11 + 1
 MOVE_NAMES   EQU POKEDEX_TEXT + 1
+NUZLOCKE_TEXT EQU MOVE_NAMES + 1
 
 INCLUDE "macros.asm"
 INCLUDE "hram.asm"
@@ -3200,3 +3201,7 @@ INCLUDE "text/pokedex.asm"
 SECTION "Move Names", ROMX, BANK[MOVE_NAMES]
 
 INCLUDE "text/move_names.asm"
+
+SECTION "Nuzlocke Text", ROMX, BANK[NUZLOCKE_TEXT]
+
+INCLUDE "text/nuzlocke_text.asm"

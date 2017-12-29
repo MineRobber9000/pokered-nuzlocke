@@ -111,6 +111,10 @@ ItemUseBall:
 	dec a
 	jp nz,ThrowBallAtTrainerMon
 
+; NUZLOCKE: Can only catch first pokemon in area. If first pokemon was already caught, display text and quit.
+
+	CheckFought AlreadyFoughtOneText
+
 ; If this is for the old man battle, skip checking if the party & box are full.
 	ld a,[wBattleType]
 	dec a
@@ -627,6 +631,9 @@ ItemUseBallText06:
 	TX_SFX_DEX_PAGE_ADDED
 	TX_BLINK
 	db "@"
+
+AlreadyFoughtOneText:
+	TX_FAR _AlreadyFoughtOneText
 
 ItemUseTownMap:
 	ld a,[wIsInBattle]

@@ -45,6 +45,10 @@ START_MONEY EQU $3000
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags
 	call FillMemory ; clear all game progress flags
 
+	ld hl, wNuzlockeBattleFlags
+	ld bc, $0008 ; (it's an 8 byte list)
+	call FillMemory ; clear all battle flags
+
 	jp InitializeMissableObjectsFlags
 
 InitializeEmptyList:

@@ -2991,6 +2991,7 @@ wWhichDungeonWarp:: ; d71e
 wUnusedD71F:: ; d71f
 	ds 1
 
+wNuzlockeBattleFlags:: ; d720
 	ds 8
 
 wd728:: ; d728

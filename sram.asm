@@ -20,6 +20,8 @@ sCurBoxData::  ds wBoxDataEnd    - wBoxDataStart ; b0c0
 sTilesetType:: ds 1 ; b522
 sNuzlockeBattleFlags:: ; b523
 	ds 8 ; 8 bytes * 8 bits = 256 flags, more than enough to store a flag for every map in the game.
+sNuzlockeCheckpoint:: ; b52b
+	ds wPartyDataEnd - wPartyDataStart ; copy of party data at last checkpoint (gym battle)
 sMainDataCheckSum:: ds 1 ; b52b
 
 

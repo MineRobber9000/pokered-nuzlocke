@@ -45,17 +45,15 @@ ENDM
 
 CheckTableBit: MACRO
 	GetBitmask \1
-	and A,[HL] ; if z flag set, bit was set
+	and A,[HL] ; if z flag set, bit was not set
 ENDM
 
 CheckFought: MACRO
-	EnableSRAM
 	ld a,[wCurMap]
-	CheckTableBit sNuzlockeBattleFlags
+	CheckTableBit wNuzlockeBattleFlags
 	jr z,.finishCheck	; If bit isn't set, then the check is over. This is the first battle the player has had in this area.
 	ld hl, \1
 	call PrintText
 	scf			; after this, do what you want (if carry flag is set, player has seen a Pokemon in this area before.)
 .finishCheck
-	DisableSRAM
 ENDM

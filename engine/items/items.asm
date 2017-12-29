@@ -113,8 +113,13 @@ ItemUseBall:
 
 ; NUZLOCKE: Can only catch first pokemon in area. If first pokemon was already caught, display text and quit.
 
-	CheckFought AlreadyFoughtOneText
+	farcall CheckFought
+	jr nc, .skipNuzlocke
+	ld hl, AlreadyFoughtOneText
+	call PrintText
+	jp .failedToCapture
 
+.skipNuzlocke
 ; If this is for the old man battle, skip checking if the party & box are full.
 	ld a,[wBattleType]
 	dec a
@@ -580,6 +585,9 @@ ItemUseBall:
 	ld a,[wBattleType]
 	and a ; is this the old man battle?
 	ret nz ; if so, don't remove a ball from the bag
+
+; NUZLOCKE: Set flag if we captured the Pokemon (to prepare for every case.)
+	farcall SetFought
 
 ; Remove a ball from the bag.
 	ld hl,wNumBagItems

@@ -596,6 +596,13 @@ OaksLabScript16:
 	ld a, $1b
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
+        CheckAndSetEvent EVENT_GOT_POKEBALLS_FROM_OAK
+        jr nz, .skip
+        lb bc, POKE_BALL, 5
+        call GiveItem
+        ld hl, OaksLabGivePokeballsText
+        call PrintText
+.skip
 	SetEvent EVENT_GOT_POKEDEX
 	SetEvent EVENT_OAK_GOT_PARCEL
 	ld a, HS_LYING_OLD_MAN
@@ -984,8 +991,6 @@ OaksLabText5:
 	ld b,POKE_BALL
 	call IsItemInBag
 	jr nz, .asm_1d2e7
-	CheckEvent EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE
-	jr nz, .asm_1d2d0
 	CheckEvent EVENT_GOT_POKEDEX
 	jr nz, .asm_1d2c8
 	CheckEventReuseA EVENT_BATTLED_RIVAL_IN_OAKS_LAB
@@ -1018,14 +1023,14 @@ OaksLabText5:
 	ld hl, OaksLabAroundWorldText
 	call PrintText
 	jr .asm_1d2ed
-.asm_1d2d0
-	CheckAndSetEvent EVENT_GOT_POKEBALLS_FROM_OAK
-	jr nz, .asm_1d2e7
-	lb bc, POKE_BALL, 5
-	call GiveItem
-	ld hl, OaksLabGivePokeballsText
-	call PrintText
-	jr .asm_1d2ed
+;.asm_1d2d0
+;	CheckAndSetEvent EVENT_GOT_POKEBALLS_FROM_OAK
+;	jr nz, .asm_1d2e7
+;	lb bc, POKE_BALL, 5
+;	call GiveItem
+;	ld hl, OaksLabGivePokeballsText
+;	call PrintText
+;	jr .asm_1d2ed
 .asm_1d2e7
 	ld hl, OaksLabPleaseVisitText
 	call PrintText

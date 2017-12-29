@@ -800,7 +800,7 @@ HandleEnemyMonFainted:
 	call nz, DrawPlayerHUDAndHPBar ; if battle mon HP is not zero, draw player HD and HP bar
 	ld a, [wIsInBattle]
 	dec a
-	ret z ; return if it's a wild battle
+	jp z, FinishWildEncounter
 	call AnyEnemyPokemonAliveCheck
 	jp z, TrainerBattleVictory
 	ld hl, wBattleMonHP
@@ -1073,7 +1073,7 @@ HandlePlayerMonFainted:
 	call FaintEnemyPokemon
 	ld a, [wIsInBattle]
 	dec a
-	ret z            ; if wild encounter, battle is over
+	jp z, FinishWildEncounter     ; if wild encounter, battle is over
 	call AnyEnemyPokemonAliveCheck
 	jp z, TrainerBattleVictory
 .doUseNextMonDialogue
@@ -1089,6 +1089,10 @@ HandlePlayerMonFainted:
 	xor a
 	ld [wActionResultOrTookBattleTurn], a
 	jp MainInBattleLoop
+
+FinishWildEncounter:
+	farcall SetFought
+	ret
 
 ; resets flags, slides mon's pic down, plays cry, and prints fainted message
 RemoveFaintedPlayerMon:

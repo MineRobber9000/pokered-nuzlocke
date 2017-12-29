@@ -20,5 +20,3 @@ before_script:
     }
 script:
   - make
-  - make compare
-  - check_status

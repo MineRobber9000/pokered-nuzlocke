@@ -50,6 +50,9 @@ MainMenu:
 	ld de,NewGameText
 	call PlaceString
 .next2
+	coord hl, 0, 12
+	ld de,NuzlockeVersionText
+	call PlaceString
 	ld hl,wd730
 	res 6,[hl]
 	call UpdateSprites
@@ -334,6 +337,12 @@ ContinueText:
 NewGameText:
 	db   "NEW GAME"
 	next "OPTION@"
+
+NuzlockeVersionText:
+	db   "NUZLOCKE BY PROFOAK"
+	next "VERSION "
+	db VERSION
+	db "@"
 
 CableClubOptionsText:
 	db   "TRADE CENTER"

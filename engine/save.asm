@@ -286,7 +286,7 @@ SaveSAVtoSRAM:
 	call SaveSAVtoSRAM1
 	jp SaveSAVtoSRAM2
 
-SAVCheckSum:
+SAVCheckSum::
 ;Check Sum (result[1 byte] is complemented)
 	ld d, 0
 .loop

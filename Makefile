@@ -6,11 +6,12 @@ MD5 := md5sum -c --quiet
 pic      := $(PYTHON) extras/pokemontools/pic.py compress
 includes := $(PYTHON) extras/pokemontools/scan_includes.py
 
-pokered_obj := audio_red.o main_red.o text_red.o wram_red.o
-pokeblue_obj := audio_blue.o main_blue.o text_blue.o wram_blue.o
+pokered_obj := audio_red.o main_red.o text_red.o wram_red.o nuzlocke_red.o
+pokeblue_obj := audio_blue.o main_blue.o text_blue.o wram_blue.o nuzlocke_blue.o
 
 version := 0.1B
 
+CLEAN_IMAGES := NO
 .SUFFIXES:
 .SUFFIXES: .asm .o .gbc .png .2bpp .1bpp .pic
 .SECONDEXPANSION:
@@ -25,7 +26,9 @@ red: pokered.gbc
 
 clean:
 	rm -f $(roms) $(pokered_obj) $(roms:.gbc=.sym)
+ifeq ($(CLEAN_IMAGES),"YES")
 	find . \( -iname '*.1bpp' -o -iname '*.2bpp' -o -iname '*.pic' \) -exec rm {} +
+endif
 
 %.asm: ;
 

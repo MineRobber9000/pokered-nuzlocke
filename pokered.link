@@ -118,43 +118,49 @@ ROMX $1F
   "Music 3"
 
 ROMX $20
-  "Text 1" ; TEXT_1
+  "Nuzlocke Code"
 
 ROMX $21
-  "Text 2" ; TEXT_2
+  "Text 1" ; TEXT_1
 
 ROMX $22
-  "Text 3" ; TEXT_3
+  "Text 2" ; TEXT_2
 
 ROMX $23
-  "Text 4" ; TEXT_4
+  "Text 3" ; TEXT_3
 
 ROMX $24
-  "Text 5" ; TEXT_5
+  "Text 4" ; TEXT_4
 
 ROMX $25
-  "Text 6" ; TEXT_6
+  "Text 5" ; TEXT_5
 
 ROMX $26
-  "Text 7" ; TEXT_7
+  "Text 6" ; TEXT_6
 
 ROMX $27
-  "Text 8" ; TEXT_8
+  "Text 7" ; TEXT_7
 
 ROMX $28
-  "Text 9" ; TEXT_9
+  "Text 8" ; TEXT_8
 
 ROMX $29
-  "Text 10" ; TEXT_10
+  "Text 9" ; TEXT_9
 
 ROMX $2A
-  "Text 11" ; TEXT_11
+  "Text 10" ; TEXT_10
 
 ROMX $2B
-  "Pokedex Text" ; POKEDEX_TEXT
+  "Text 11" ; TEXT_11
 
 ROMX $2C
+  "Pokedex Text" ; POKEDEX_TEXT
+
+ROMX $2D
   "Move Names" ; MOVE_NAMES
+
+ROMX $2E
+  "Nuzlocke Text" ; NUZLOCKE_TEXT
 
 WRAM0
   "WRAM Bank 0"

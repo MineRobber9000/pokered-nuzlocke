@@ -1,6 +1,6 @@
 INCLUDE "charmap.asm"
 INCLUDE "constants/text_constants.asm"
-TEXT_1  EQU $20
+TEXT_1  EQU $21
 TEXT_2  EQU TEXT_1 + 1
 TEXT_3  EQU TEXT_2 + 1
 TEXT_4  EQU TEXT_3 + 1

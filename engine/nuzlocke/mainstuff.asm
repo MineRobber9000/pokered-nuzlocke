@@ -65,6 +65,7 @@ CheckFought::
 	ret
 
 SetFought::
+	CheckEvent EVENT_GOT_POKEBALLS_FROM_OAK
 	ld a,[wCurMap]
 	ld hl,wNuzlockeBattleFlags
 	call SetTableBit

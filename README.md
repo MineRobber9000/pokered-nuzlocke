@@ -11,14 +11,14 @@ To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
 ## See also
 
-* Disassembly of [**Pok  mon Red/Blue**][pokered]
+* Disassembly of [**Pokémon Red/Blue**][pokered]
 * Disassembly of [**Pokémon Yellow**][pokeyellow]
 * Disassembly of [**Pokémon Crystal**][pokecrystal]
 * Disassembly of [**Pokémon Pinball**][pokepinball]
 * Disassembly of [**Pokémon TCG**][poketcg]
 * Disassembly of [**Pokémon Ruby**][pokeruby]
 * Disassembly of [**Pokémon Emerald**][pokeemerald]
-* [The Discord server for this hack][MyDiscord]
+* [**The Discord server for this hack**][MyDiscord]
 * PRET Discord: [**pret**][Discord]
 * PRET irc: **irc.freenode.net** [**#pret**][irc]
 

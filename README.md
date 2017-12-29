@@ -1,6 +1,6 @@
 # Pokémon Red: Nuzlocke Edition
 
-This is a hack of Pokémon Red that enforces the Nuzlocke rules.
+This is a hack of Pokémon Red that enforces [the core Nuzlocke rules plus a few optional rules][wiki].
 
 It builds the following roms:
 
@@ -22,6 +22,7 @@ To set up the repository, see [**INSTALL.md**](INSTALL.md).
 * PRET Discord: [**pret**][Discord]
 * PRET irc: **irc.freenode.net** [**#pret**][irc]
 
+[wiki]: https://github.com/MineRobber9000/pokered-nuzlocke/wiki/Rules
 [pokered]: https://github.com/pret/pokered
 [pokeyellow]: https://github.com/pret/pokeyellow
 [pokecrystal]: https://github.com/pret/pokecrystal

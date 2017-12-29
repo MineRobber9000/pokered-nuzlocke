@@ -1016,7 +1016,7 @@ TrainerBattleVictory:
 	ld b, MUSIC_DEFEATED_GYM_LEADER
 	ld hl, wFlags_D733
 	set 1, [hl]
-	farcall SavePartyCheckpoint
+	; farcall SavePartyCheckpoint
 .notrival
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING

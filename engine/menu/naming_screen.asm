@@ -8,6 +8,7 @@ AskName:
 	ld b, 4
 	ld c, 11
 	call z, ClearScreenArea ; only if in wild battle
+	jp .nicknameit ; NUZLOCKE: force nickname choice
 	ld a, [wcf91]
 	ld [wd11e], a
 	call GetMonName
@@ -22,6 +23,7 @@ AskName:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .declinedNickname
+.nicknameit
 	ld a, [wUpdateSpritesEnabled]
 	push af
 	xor a
